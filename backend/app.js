@@ -29,4 +29,9 @@ const app= express();
   tempFileDir: "/tmp/",
     })
     );
+
+    app.use("/api/v1/user", userRouter);
+    app.use("/api/v1/application", applicationRouter);
+    app.use("/api/v1job", jobRouter);
+
 export default app;
