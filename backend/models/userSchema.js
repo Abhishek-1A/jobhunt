@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 import validator from "validator";
 import bcrypt from "bcrypt";
 import { Jwt } from "jsonwebtoken";
@@ -51,3 +51,6 @@ const userSchema = new mongoose.Schema({
         expiresIn: process.env.JWT_EXPIRE,
     });
    };
+   
+   
+   export const User= mongoose.model("User", userSchema);
